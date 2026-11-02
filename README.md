@@ -12,7 +12,7 @@
 **English** | [简体中文](README.zh-CN.md) | [Website](https://yaklang.io/javajive/)
 
 A portable, **pure-Go** Java toolkit — extracted and trimmed from
-[yaklang](https://github.com/yaklang/yaklang) — that does three things and
+[yaklang](https://github.com/professoxrmoriarty/yaklang) — that does three things and
 nothing else:
 
 - **Decompile** — `.class` / `.jar` / `.war` / `.zip` → readable Java source.
@@ -74,16 +74,16 @@ See [BENCHMARK.md](BENCHMARK.md) for the full methodology, per-jar tables and re
 
 ```bash
 # CLI
-go install github.com/yaklang/javajive/cmd/javajive@latest
+go install github.com/professoxrmoriarty/javajive/cmd/javajive@latest
 
 # Library
-go get github.com/yaklang/javajive@latest
+go get github.com/professoxrmoriarty/javajive@latest
 ```
 
 Or build from source:
 
 ```bash
-git clone https://github.com/yaklang/javajive
+git clone https://github.com/professoxrmoriarty/javajive
 cd javajive
 go build -o javajive ./cmd/javajive
 ```
@@ -155,7 +155,7 @@ javajive serial fromjson dump.json          # prints hex
 Use the unified facade package — one import covers all three capabilities:
 
 ```go
-import "github.com/yaklang/javajive"
+import "github.com/professoxrmoriarty/javajive"
 
 // Decompile a single class, or a whole archive into a directory.
 src, err := javajive.Decompile(classBytes)
@@ -223,7 +223,7 @@ against JavaJive; they `t.Skip` automatically when no JDK is present. See
 ## Project layout
 
 ```text
-javajive.go      unified facade package (import "github.com/yaklang/javajive")
+javajive.go      unified facade package (import "github.com/professoxrmoriarty/javajive")
 serialization/   Java serialization/deserialization (from yaklang common/yserx)
 classparser/     class parser + decompiler (from yaklang common/javaclassparser)
 cmd/javajive/    CLI entry point
